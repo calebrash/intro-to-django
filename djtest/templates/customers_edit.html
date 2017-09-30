@@ -1,13 +1,14 @@
-<p>
-    <a href="{% url 'customers_list' %}">
-        &lsaquo; Back
-    </a>
-</p>
+{% extends 'base.html' %}
 
-<form action="{% url 'customers_edit' customer_id=customer.id %}" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">
-        Save
-    </button>
-</form>
+{% block main %}
+    <h1>Edit</h1>
+
+    <form action="{% url 'customers_edit' customer_id=customer.id %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">
+            Save
+        </button>
+        <p><a href="{% url 'customers_list' %}">Cancel</a></p>
+    </form>
+{% endblock main %}
