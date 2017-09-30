@@ -1,0 +1,13 @@
+<p>
+    <a href="{% url 'customers_list' %}">
+        &lsaquo; Back
+    </a>
+</p>
+
+<form action="{% url 'customers_edit' customer_id=customer.id %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">
+        Save
+    </button>
+</form>

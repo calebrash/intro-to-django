@@ -1,3 +1,9 @@
-{% for customer in customers %}
-    <li>{{ customer.name }}</li>
-{% endfor %}
+<ul>
+    {% for customer in customers %}
+        <li>
+            <a href="{% url 'customers_edit' customer_id=customer.id %}">
+                {{ customer.name }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

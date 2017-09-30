@@ -16,3 +16,5 @@ local_settings.py
 # Environments
 .env
 .venv
+
+db.sqlite3
