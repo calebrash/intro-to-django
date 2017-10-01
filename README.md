@@ -1,6 +1,6 @@
 This is the code for an introductory Django talk I gave for the monthly Central Arkansas Python meetup on 9/28/2017.
 
-Learn more:
+__Learn more:__
 - [Meetup](https://www.meetup.com/Python-Artists-of-Arkansas/)
 - [Website](http://pyark.org/)
 
@@ -27,6 +27,6 @@ pip install -r requirements.txt
 ./manage.py runserver
 ```
 
-Test pages:
+__Test pages:__
 - [admin: /admin/](http://localhost:8000/admin/)
 - [customers: /customers/](http://localhost:8000/customers/)
