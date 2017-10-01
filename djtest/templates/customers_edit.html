@@ -4,11 +4,19 @@
     <h1>Edit</h1>
 
     <form action="{% url 'customers_edit' customer_id=customer.id %}" method="POST">
+        {% comment %}
+            Forms are CSRF-protected by default, so you must include a `csrf_token` for POST
+            requests or disable CSRF protection (but probably don't do that).
+        {% endcomment %}
         {% csrf_token %}
+
+        {% comment %}
+            There are many different ways to render a form. Try `as_table` or `as_ul` for slightly
+            different layouts.
+        {% endcomment %}
         {{ form.as_p }}
-        <button type="submit">
-            Save
-        </button>
+
+        <button type="submit">Save</button>
         <p><a href="{% url 'customers_list' %}">Cancel</a></p>
     </form>
 {% endblock main %}

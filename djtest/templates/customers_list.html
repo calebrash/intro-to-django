@@ -5,6 +5,10 @@
     <ul>
         {% for customer in customers %}
             <li>
+                {% comment %}
+                    Add a url to template by referencing the `name` arg from urls.py in the url tag.
+                    If a url has a regexp param, you must include that as an argument to the url tag.
+                {% endcomment %}
                 <a href="{% url 'customers_edit' customer_id=customer.id %}">
                     {{ customer.name }}
                 </a>
